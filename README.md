@@ -1,16 +1,33 @@
-# gesture
+# GestureDetector Demo
 
-A new Flutter project.
+A simple Flutter app I built to learn and demonstrate how GestureDetector works in Flutter. Made this for a class presentation to show different types of gesture detection.
 
-## Getting Started
+## What it does
 
-This project is a starting point for a Flutter application.
+This app shows three main categories of gestures you can detect with Flutter's GestureDetector widget:
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Tap Gestures
+- **Single Tap** - Just tap the box once, it turns green
+- **Double Tap** - Tap twice quickly, turns pink
+- **Long Press** - Hold it down for a bit, turns purple
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Pretty straightforward stuff, but it's cool to see how Flutter can tell the difference between these.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Move Gestures  
+There's a purple circle you can drag around inside a container. It uses `onPanUpdate` to track your finger movement and update the position. I added some boundary limits so it doesn't fly off the screen.
+
+### 3. Scale Gestures
+This one's a bit trickier - it's the pinch-to-zoom feature. Use two fingers to pinch in/out and you'll see the box scale up or down. The scale factor is displayed right on the box (goes from 0.5x to 3.0x).
+
+## How to run
+
+Just clone this repo and run:
+```bash
+flutter run
+```
+
+**Note:** For the scale gesture on an emulator, hold Ctrl (or Cmd on Mac) while dragging to simulate the pinch gesture.
+
+## Why I made this
+
+Honestly just needed a quick demo for class to show how GestureDetector works. Figured it'd be more fun to actually interact with gestures than just looking at slides. The code has comments explaining what each callback does if you want to dig into how it works.
