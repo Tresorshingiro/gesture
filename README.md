@@ -27,7 +27,3 @@ flutter run
 ```
 
 **Note:** For the scale gesture on an emulator, hold Ctrl (or Cmd on Mac) while dragging to simulate the pinch gesture.
-
-## Why I made this
-
-Honestly just needed a quick demo for class to show how GestureDetector works. Figured it'd be more fun to actually interact with gestures than just looking at slides. The code has comments explaining what each callback does if you want to dig into how it works.
